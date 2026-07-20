@@ -4,29 +4,11 @@ This folder contains a Jupyter notebook implementation of the RC (reaction coord
 
 **“Parameter Estimation in a Continuously Monitored Non-Markovian Quantum System.”**
 
-The main notebook (`RC_mapping.ipynb`, and an equivalent working copy `final_brownian copy.ipynb`) compares three dynamical descriptions for a harmonic system coupled to a structured environment:
+The main notebook `RC_mapping.ipynb` compares three dynamical descriptions for a harmonic system coupled to a structured environment:
 
 1. **LOCAL**: GKLS dynamics for the system mode only  
-2. **GLOBAL**: GKLS dynamics for the enlarged system + reaction coordinate (S-RC)  
+2. **GLOBAL**: GKLS dynamics for the enlarged system + reaction coordinate (S-RC unit)  
 3. **EXACT**: Non-Markovian dynamics from inverse Laplace methods and noise-kernel integration
-
----
-
-## Contents
-
-- `RC_mapping.ipynb`  
-  Main notebook with full workflow:
-  - parameter setup
-  - local master equation
-  - global (S-RC) master equation
-  - exact dynamics using residue/inverse-Laplace approach
-  - comparative plots for first and second moments
-
-- `final_brownian copy.ipynb`  
-  A duplicate/working version of the same analysis.
-
-- `Readme`  
-  This file.
 
 ---
 
@@ -139,27 +121,3 @@ Typical Python dependencies used in the notebook:
 - `mpmath`
 - `tqdm`
 - `scienceplots` (for final figure style)
-
-Install example:
-
-```bash
-pip install numpy scipy matplotlib mpmath tqdm scienceplots
-```
-
----
-
-## Running
-
-1. Open `RC_mapping.ipynb`.
-2. Run cells from top to bottom (parameter cell first).
-3. Inspect:
-   - printed diagnostic values (renormalized frequencies, poles/residues, final variances)
-   - generated comparison figures
-
----
-
-## Notes
-
-- `RC_mapping.ipynb` and `final_brownian copy.ipynb` currently contain effectively the same code.
-- The `EXACT` section can be computationally heavy due to dense time grids and Matsubara summation.
-- For quick tests, reduce `T_max`, increase `dt`, or lower `Nmats`.
