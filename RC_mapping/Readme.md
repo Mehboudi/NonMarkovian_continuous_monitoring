@@ -1,4 +1,4 @@
-# RC Mapping: Continuously Monitored Non-Markovian Quantum System
+# RC Mapping
 
 This folder contains a Jupyter notebook implementation of the RC (reaction coordinate) mapping analysis used in the manuscript:
 
@@ -33,7 +33,7 @@ The notebook initializes (example values shown in the code):
 
 ## 1) LOCAL (GKLS for S)
 
-Implements a 2D Gaussian dynamics (`x, p`) with drift and diffusion matrices:
+Implements a Gaussian dynamics with drift and diffusion matrices (`x, p`):
 
 - `lindblad_matrices_system(...)`
 - `lindblad_ode_system(...)`
@@ -55,7 +55,7 @@ Also computes steady-state covariance with:
 
 ## 2) GLOBAL (GKLS for S-RC)
 
-Implements 4D Gaussian dynamics (`x_S, p_S, x_RC, p_RC`) for the enlarged Markovian embedding:
+Implements Gaussian dynamics for the enlarged Markovian embedding (`x_S, p_S, x_RC, p_RC`):
 
 - normal-mode frequencies via `frequencies(...)`
 - drift/diffusion via `lindblad_matrices_system_RC(...)`
@@ -120,4 +120,4 @@ Typical Python dependencies used in the notebook:
 - `matplotlib`
 - `mpmath`
 - `tqdm`
-- `scienceplots` (for final figure style)
+- `scienceplots` 
